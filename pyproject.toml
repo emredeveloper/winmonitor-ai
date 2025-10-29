@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winmonitor-ai"
+version = "0.1.0"
+description = "Windows system monitoring and Ollama-assisted analysis GUI."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "WinMonitor Maintainers" }
+]
+dependencies = [
+    "psutil>=5.9",
+    "requests>=2.31",
+    "win10toast>=0.9"
+]
+
+[project.optional-dependencies]
+ollama = [
+    "ollama>=0.1"
+]
+
+[project.scripts]
+winmonitor-gui = "startup_info:main"
+
+[tool.setuptools]
+py-modules = ["startup_info"]
