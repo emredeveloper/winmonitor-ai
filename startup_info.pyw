@@ -165,20 +165,24 @@ def create_gui():
     
     root.mainloop()
 
-if __name__ == "__main__":
+def main():
     print("Sistem Raporu Uygulaması")
     print("-------------------------")
-    
+
     system_info = get_system_info()
     print("\nSistem Bilgileri:\n", system_info)
-    
+
     analysis_result = analyze_with_deepscaler(system_info)
     print("\nAnaliz Sonucu:\n", analysis_result)
-    
+
     save_report_to_file(system_info)
-    
+
     threading.Thread(target=auto_generate_report, daemon=True).start()
-    
+
     create_gui()
-    
+
     show_notification(analysis_result[:256])
+
+
+if __name__ == "__main__":
+    main()

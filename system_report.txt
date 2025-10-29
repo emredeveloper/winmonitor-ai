@@ -1,4 +1,0 @@
-İşletim Sistemi: Windows 10
-Bilgisayar Adı: Emre
-CPU Kullanımı: 25.5%
-RAM Kullanımı: 36.1%
